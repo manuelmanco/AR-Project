@@ -22,14 +22,14 @@ Calcul du score : x pts par cible * 1/distance
 -	Nombre augmente exponentiellement  
 
 ###Hero  
-•	Vies  
-•	Vecteur de visée (angles X/Y)    
+- Vies  
+- Vecteur de visée (angles X/Y)    
 
 ###Score  
-•	Tirs connectés + distance + timestamp  
-•	Tirs manqués  
-•	Temps  
-•	Vies perdues + timestamp  
+- Tirs connectés + distance + timestamp  
+-	Tirs manqués  
+-	Temps  
+-	Vies perdues + timestamp  
 
 ###Organisation  
 #####Team Graphique  
