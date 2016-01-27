@@ -1,0 +1,83 @@
+{
+    "images": [
+        {
+            "filename": "1.png",
+            "idiom": "universal",
+            "scale": "1x"
+        },
+        {
+            "filename": "1_2x.png",
+            "idiom": "universal",
+            "scale": "2x"
+        },
+        {
+            "filename": "1_3x.png",
+            "idiom": "universal",
+            "scale": "3x"
+        },
+        {
+            "filename": "2.png",
+            "idiom": "universal",
+            "scale": "1x"
+        },
+        {
+            "filename": "2_2x.png",
+            "idiom": "universal",
+            "scale": "2x"
+        },
+        {
+            "filename": "2_3x.png",
+            "idiom": "universal",
+            "scale": "3x"
+        },
+        {
+            "filename": "3.png",
+            "idiom": "universal",
+            "scale": "1x"
+        },
+        {
+            "filename": "3_2x.png",
+            "idiom": "universal",
+            "scale": "2x"
+        },
+        {
+            "filename": "3_3x.png",
+            "idiom": "universal",
+            "scale": "3x"
+        },
+        {
+            "filename": "4.png",
+            "idiom": "universal",
+            "scale": "1x"
+        },
+        {
+            "filename": "4_2x.png",
+            "idiom": "universal",
+            "scale": "2x"
+        },
+        {
+            "filename": "4_3x.png",
+            "idiom": "universal",
+            "scale": "3x"
+        },
+        {
+            "filename": "5.png",
+            "idiom": "universal",
+            "scale": "1x"
+        },
+        {
+            "filename": "5_2x.png",
+            "idiom": "universal",
+            "scale": "2x"
+        },
+        {
+            "filename": "5_3x.png",
+            "idiom": "universal",
+            "scale": "3x"
+        }
+    ],
+    "info": {
+        "author": "pacman",
+        "version": 1
+    }
+}
