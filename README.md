@@ -32,7 +32,7 @@ Calcul du score : x pts par cible * 1/distance
 -	Vies perdues + timestamp  
 
 ###Organisation  
-#####Team Graphique  
+#####*Team Graphique*    
 Membre : Manu |Janvier  
 -	Assets / Couleurs / Emplacement  
 -	Décrire le code pour dépatouiller
@@ -40,21 +40,21 @@ Membre : Manu |Janvier
 -	Animations (code)
 -	Propositions ratifiées  
 
-#####Team iOS  
+#####*Team iOs*  
 Membre :Rémi | Charles | Thomas |Jordan
 -	Dev  
 
-#####Team Android  
+#####*Team Android*  
 Kevin V| Jeremy| Etienne (Algo)|	David (Vues)
 -	Dev  
 
-#####Team Webservices
+#####*Team Webservices*
 Membre :Léopold|Kevin S  
 -	Connexion au serveur  
 -	Préparer HTTP authentifié pour faire des requêtes  
 -	Créer compte, se connecter (user_id)  
 
-#####Equipe QA
+#####*Team QA*
 Membre :Florian (Android)|Paul (iOS)
 -	Repérer les difficultés techniques rencontrées par les teams iOs et Android  
 -	Tests  
