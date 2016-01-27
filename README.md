@@ -45,11 +45,11 @@ Membre :Rémi | Charles | Thomas |Jordan
 -	Dev  
 
 #####*Team Android*  
-Kevin V| Jeremy| Etienne (Algo)|	David (Vues)
+Léopold| Jeremy| Etienne (Algo)|	David (Vues)
 -	Dev  
 
 #####*Team Webservices*
-Membre :Léopold|Kevin S  
+Membre :Kévin V|Kevin S  
 -	Connexion au serveur  
 -	Préparer HTTP authentifié pour faire des requêtes  
 -	Créer compte, se connecter (user_id)  
