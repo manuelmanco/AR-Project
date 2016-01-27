@@ -20,6 +20,7 @@ public class Tir {
     }
 
     public int nbDePoints() {
-
+        return 0; // todo
     }
 }
+
