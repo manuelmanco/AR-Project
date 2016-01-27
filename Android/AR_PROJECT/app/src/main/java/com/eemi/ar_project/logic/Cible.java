@@ -6,7 +6,9 @@ import java.util.Date;
  * Created by moufle on 27/01/16.
  */
 public class Cible {
-    public double position;
+    public double x;
+    public double y;
+    public double z;
     public double rayon;
     public double vitesse;
     public int type;
@@ -25,7 +27,6 @@ public class Cible {
         } else {
             return new Date().getTime() - born;
         }
-
     }
 
     public boolean hitTest( double phi, double theta) {
