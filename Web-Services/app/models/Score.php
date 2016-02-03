@@ -79,9 +79,11 @@ class Score extends \Core\Database\Models
 
         $query .= " ORDER BY players.player_highscore DESC";
 
-        if(isset($params['limit']) && isset($params['offset'])){
+        if(isset($opts['limit']) && isset($opts['offset'])){
             $query .= " LIMIT :limit, :offset";
         }
+
+        //die($query);
 
         return $this->executeWithBindedValues(
             $query,

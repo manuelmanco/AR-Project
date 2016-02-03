@@ -24,6 +24,11 @@ $(document).ready(function(){
             'getHighScores' : {
                 'module': 'score',
                 'action': 'getHighScores',
+                'params' : {
+                    'limit' : 0,
+                    'offset' : 10,
+                    'period' : 'currentWeek'
+                }
             },
         };
 
