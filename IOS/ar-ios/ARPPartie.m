@@ -11,6 +11,7 @@
 #import "ARPTir.h"
 
 @implementation ARPPartie
+
 - (int) score {
     //calculate score with self.shots and return
     return 1;
@@ -42,9 +43,32 @@
     //do something
 }
 
-- (BOOL) hitTestWithPhi:(double)phi andWithTeta:(double)teta {
+- (BOOL) hitTestWithX:(double) x andWithY:(double) y {
     //check if a target is present in direction the player pushed
+    for(ARPcible *c in self.targets){
+        
+        bool touch = [c hitTestWithX: x andWithY: y];
+        
+        if (touch == true) {
+            //Cible morte créer un tir
+        }
+        
+    }
+    
     return true;
+    
+}
+
+- (void) findCenter {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    CGFloat screenCenterX = (screenWidth / 2);
+    CGFloat screenCenterY = (screenHeight /2);
+    NSLog(@"centre x: %lf", screenCenterX);
+    NSLog(@"centre y: %lf", screenCenterY);
+
 }
 
 @end

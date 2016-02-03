@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ARPcible : UIViewController
-<<<<<<< Updated upstream
+
 //POSITION
 @property (nonatomic)  NSMutableArray *position;
 //RAYON
@@ -26,9 +26,5 @@
 @property NSDate *born;
 //DEED
 @property NSDate *deed;
-=======
-    
 
-
->>>>>>> Stashed changes
 @end
