@@ -65,10 +65,6 @@ class Score extends \Core\Database\Models
      */
     public function selectHighScores($opts)
     {
-        $limit = is_null($opts['limit']) ? 0 : $opts['limit'];
-        $length = is_null($opts['offset']) ? 10 : $opts['offset'];
-        $period = is_null($opts['period']) ? $opts['period'] : 'allTime';
-
         $query = "SELECT
                             players.player_name
                             , players.player_highscore
@@ -77,14 +73,25 @@ class Score extends \Core\Database\Models
 
                           WHERE TRUE";
 
-        if($period !== "allTime"){
-
+        if($opts['period'] === "currentWeek"){
             $query .= ' AND YEARWEEK(score_date, 5) = YEARWEEK(CURDATE(), 5)';
         }
 
-        $query .= " ORDER BY players.player_highscore DESC LIMIT $limit, $length";
+        $query .= " ORDER BY players.player_highscore DESC";
 
-        return $this->fetchResults($query, 'all');
+        if(isset($params['limit']) && isset($params['offset'])){
+            $query .= " LIMIT :limit, :offset";
+        }
+
+        return $this->executeWithBindedValues(
+            $query,
+            array(
+                ':limit' => array($opts['limit'], PDO::PARAM_INT),
+                ':offset' => array($opts['offset'], PDO::PARAM_INT),
+            ),
+            true,
+            'all'
+        );
     }
 
 

@@ -61,9 +61,9 @@ class ScoreController extends \Core\System\AbstractPageSystem
      */
     public function getHighScores()
     {
-        $limit = isset($this->get['params']['limit']) ? $this->get['params']['limit'] : null;
-        $offset = isset($this->get['params']['offset']) ? $this->get['params']['offset'] : null;
-        $period = isset($this->get['params']['period']) ? $this->get['params']['period'] : null;
+        $limit = isset($this->get['params']['limit']) ? $this->get['params']['limit'] : 0;
+        $offset = isset($this->get['params']['offset']) ? $this->get['params']['offset'] : 10;
+        $period = isset($this->get['params']['period']) ? $this->get['params']['period'] : 'allTime';
 
         $opts = array(
             'limit' => $limit,
