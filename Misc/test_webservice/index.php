@@ -13,14 +13,8 @@
 
             <hr/>
 
-			<p>Register Webservice</p>
-            <button class="trigger_event" display="reg" called-method='authentificateDevelopper'>Register</button>
-            <div class="results" id="reg"></div>
-
-			<br/><br/><br/>
-
-			<p>Afficher top 10 scores</p>
-            <button class="trigger_event" display="scores" called-method='getHighScores'>Get top 10</button>
+			<p>Afficher scores</p>
+            <button class="trigger_event" display="scores" called-method='getHighScores'>Get scores</button>
             <div class="results" id="scores"></div>
 
             <br/><br/><br/>
