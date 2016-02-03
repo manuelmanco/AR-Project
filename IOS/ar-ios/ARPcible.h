@@ -8,20 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ARPcible : UIViewController
+#define kDefautdistancetophone 30
+#define kDefautRadius 30
 
+@interface ARPcible : UIViewController
 //POSITION
-@property (nonatomic)  NSMutableArray *position;
+@property (nonatomic) double x;
+@property (nonatomic) double y;
+@property (nonatomic) double z;
 //RAYON
 @property (nonatomic) double rayon;
+//ACTIVE
+@property (nonatomic) BOOL active;
+
+
 //VITESSE
 @property (nonatomic) double vitesse;
 //TYPE
 @property (nonatomic) int type;
-//ACTIVE
-@property (nonatomic) BOOL active;
 //DOMAGE
 @property (nonatomic) int domage;
+
+-(NSArray*)positionOnScreenWithTeta: (double) teta AndPhi: (double) phi;
+
 //BORN
 @property NSDate *born;
 //DEED
