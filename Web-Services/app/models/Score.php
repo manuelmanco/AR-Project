@@ -66,8 +66,8 @@ class Score extends \Core\Database\Models
     public function selectHighScores($opts)
     {
         $limit = is_null($opts['limit']) ? 0 : $opts['limit'];
-        $length = is_null($opts['length']) ? 10 : $opts['length'];
-        $period = is_null($opts['period']) ? 'allTime' : $opts['period'];
+        $length = is_null($opts['offset']) ? 10 : $opts['offset'];
+        $period = is_null($opts['period']) ? $opts['period'] : 'allTime';
 
         $query = "SELECT
                             players.player_name
@@ -77,13 +77,65 @@ class Score extends \Core\Database\Models
 
                           WHERE TRUE";
 
-        // TODO
-        // if($period !== "allTime"){
-        //     $query .= "";
-        // }
+        if($period !== "allTime"){
+
+            $query .= ' AND YEARWEEK(score_date, 5) = YEARWEEK(CURDATE(), 5)';
+        }
 
         $query .= " ORDER BY players.player_highscore DESC LIMIT $limit, $length";
 
         return $this->fetchResults($query, 'all');
+    }
+
+
+    public function getArticles($params = array())
+    {
+        $query = "SELECT
+                            articles.article_id AS id
+                          , articles.article_img AS img
+                          , articles.article_title AS title
+                          , articles.article_content AS content
+                          , articles.article_date AS date_
+                          , users.user_pseudo AS author
+
+                          FROM choom_blog_articles AS articles
+
+                          LEFT JOIN choom_users AS users
+                          ON users.user_id = articles.article_author
+
+                          WHERE TRUE";
+
+        if(isset($params['article_id'])){
+            $query .= " AND articles.article_id = :article_id ";
+            $results = $this->executeWithBindedValues(
+                $query,
+                array(
+                    ':article_id' => array($params['article_id'], PDO::PARAM_INT),
+                ),
+                true,
+                'one'
+            );
+        } else {
+            $query .= " ORDER BY articles.article_id DESC ";
+
+            if(isset($params['limit']) && isset($params['offset'])){
+                $query .=" LIMIT :limit, :offset";
+                $results = $this->executeWithBindedValues(
+                    $query,
+                    array(
+                        ':limit' => array($params['limit'], PDO::PARAM_INT),
+                        ':offset' => array($params['offset'], PDO::PARAM_INT),
+                    ),
+                    true,
+                    'all'
+                );
+            } else {
+                $results = $this->fetchResults($query, 'all');
+            }
+        }
+
+
+
+        return $results;
     }
 }
