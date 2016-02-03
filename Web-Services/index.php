@@ -17,9 +17,8 @@ Core\Autoloader::register();
 
 /**
  * Définition des domaines autorisés à communiquer avec l'api
- * TODO : Mettre l'addresse de l'EEMI
  */
-// App\Services\AccessControl::setAuthDomains(array('http://localhost:8888'));
+App\Services\AccessControl::setAuthDomains(array('http://localhost:8888'));
 
 /**
  * JSON encode du retour

@@ -5,7 +5,7 @@
  *
  * Cette classe gère les control d'acces à l'api
  *
- * @author : Kévin Vacherot & Kévin Siow
+ * @author : Kévin Vacherot
  *
  */
 
@@ -22,13 +22,14 @@ class AccessControl
 	{
         // On vérifie s'il s'agit d'une requête cross-domain
         if (!isset($_SERVER['HTTP_ORIGIN'])) {
-            exit;
+            return false;
+        } else {
+            // On indique et vérifie les domaines autorisés à communiquer avec l'api
+            if (!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
+                exit;
+            }
         }
 
-        // On indique et vérifie les domaines autorisés à communiquer avec l'api
-        if (!in_array($_SERVER['HTTP_ORIGIN'], $allowedDomains)) {
-            exit;
-        }
 
         $origin = is_null($allowedDomains) ? '*' : $_SERVER['HTTP_ORIGIN'];
 

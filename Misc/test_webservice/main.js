@@ -41,7 +41,7 @@ $(document).ready(function(){
         var finalDatas = objectMerge(dev, datas);
 
         $.ajax({
-            url: 'http://vacherot.etudiant-eemi.com/perso/dossier/malcolm0810/bucket_hunter/',
+            url: 'http://vacherot.etudiant-eemi.com/perso/ar_project/',
             type: 'GET',
             crossDomain: true,
             datatype: 'json',
