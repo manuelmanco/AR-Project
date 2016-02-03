@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D288DB4B-599E-4CF6-B67A-E183BD84188F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ar-ios</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E4222F79-11F8-40D2-AB8B-1132F9D52E30</key>
+		<string>https://github.com/charlesduvert/projet-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ar-ios.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E4222F79-11F8-40D2-AB8B-1132F9D52E30</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/charlesduvert/projet-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E4222F79-11F8-40D2-AB8B-1132F9D52E30</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E4222F79-11F8-40D2-AB8B-1132F9D52E30</string>
+			<key>IDESourceControlWCCName</key>
+			<string>projet-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

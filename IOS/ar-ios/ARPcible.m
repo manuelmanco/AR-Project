@@ -10,26 +10,19 @@
 
 @interface ARPcible ()
 
-    //POSITION
-    @property (nonatomic)  NSMutableArray *position;
-    //RAYON
-    @property (nonatomic) double rayon;
-    //VITESSE
-    @property (nonatomic) double vitesse;
-    //TYPE
-    @property (nonatomic) int type;
-    //ACTIVE
-    @property (nonatomic) BOOL active;
-    //DOMAGE
-    @property (nonatomic) int domage;
-    //BORN
-    @property NSDate *born;
-    //DEED
-    @property NSDate *deed;
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
 
 @end
 
 @implementation ARPcible
+
+-(void)maj{};
+-(void)life{};
+-(void)therare{};
+-(void)timestanmp{};
 
 - (void)viewDidLoad {
     [super viewDidLoad];

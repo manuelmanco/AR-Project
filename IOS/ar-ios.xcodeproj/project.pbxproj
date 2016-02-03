@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51D75E071C59247F008788C7 /* ARPcible.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D75E061C59247F008788C7 /* ARPcible.m */; };
+		51D75E0A1C5929F0008788C7 /* ARPPartie.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D75E091C5929F0008788C7 /* ARPPartie.m */; };
 		E49C306E1C591CB800EB66B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C306D1C591CB800EB66B9 /* main.m */; };
 		E49C30711C591CB800EB66B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C30701C591CB800EB66B9 /* AppDelegate.m */; };
 		E49C30741C591CB800EB66B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C30731C591CB800EB66B9 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 		E49C307C1C591CB800EB66B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C307A1C591CB800EB66B9 /* LaunchScreen.storyboard */; };
 		E49C30871C591CB800EB66B9 /* ar_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C30861C591CB800EB66B9 /* ar_iosTests.m */; };
 		E49C30921C591CB800EB66B9 /* ar_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E49C30911C591CB800EB66B9 /* ar_iosUITests.m */; };
+		ECC818F71C5929B400F86484 /* ARPPartie.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC818F61C5929B400F86484 /* ARPPartie.m */; };
+		ECC818FA1C592DD100F86484 /* ARPTir.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC818F91C592DD100F86484 /* ARPTir.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 /* Begin PBXFileReference section */
 		51D75E051C59247F008788C7 /* ARPcible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPcible.h; sourceTree = "<group>"; };
 		51D75E061C59247F008788C7 /* ARPcible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPcible.m; sourceTree = "<group>"; };
+		51D75E081C5929F0008788C7 /* ARPPartie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPPartie.h; sourceTree = "<group>"; };
+		51D75E091C5929F0008788C7 /* ARPPartie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPPartie.m; sourceTree = "<group>"; };
 		E49C30691C591CB800EB66B9 /* ar-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ar-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49C306D1C591CB800EB66B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E49C306F1C591CB800EB66B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +59,10 @@
 		E49C308D1C591CB800EB66B9 /* ar-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ar-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49C30911C591CB800EB66B9 /* ar_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ar_iosUITests.m; sourceTree = "<group>"; };
 		E49C30931C591CB800EB66B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC818F51C5929B400F86484 /* ARPPartie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPPartie.h; sourceTree = "<group>"; };
+		ECC818F61C5929B400F86484 /* ARPPartie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPPartie.m; sourceTree = "<group>"; };
+		ECC818F81C592DD100F86484 /* ARPTir.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPTir.h; sourceTree = "<group>"; };
+		ECC818F91C592DD100F86484 /* ARPTir.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPTir.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,13 @@
 		E49C306B1C591CB800EB66B9 /* ar-ios */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< Updated upstream
+				ECC818F51C5929B400F86484 /* ARPPartie.h */,
+				ECC818F61C5929B400F86484 /* ARPPartie.m */,
+=======
+				51D75E081C5929F0008788C7 /* ARPPartie.h */,
+				51D75E091C5929F0008788C7 /* ARPPartie.m */,
+>>>>>>> Stashed changes
 				E49C306F1C591CB800EB66B9 /* AppDelegate.h */,
 				E49C30701C591CB800EB66B9 /* AppDelegate.m */,
 				E49C30721C591CB800EB66B9 /* ViewController.h */,
@@ -115,6 +131,8 @@
 				E49C307A1C591CB800EB66B9 /* LaunchScreen.storyboard */,
 				E49C307D1C591CB800EB66B9 /* Info.plist */,
 				E49C306C1C591CB800EB66B9 /* Supporting Files */,
+				ECC818F81C592DD100F86484 /* ARPTir.h */,
+				ECC818F91C592DD100F86484 /* ARPTir.m */,
 			);
 			path = "ar-ios";
 			sourceTree = "<group>";
@@ -278,7 +296,13 @@
 				E49C30741C591CB800EB66B9 /* ViewController.m in Sources */,
 				E49C30711C591CB800EB66B9 /* AppDelegate.m in Sources */,
 				E49C306E1C591CB800EB66B9 /* main.m in Sources */,
+<<<<<<< Updated upstream
+				ECC818F71C5929B400F86484 /* ARPPartie.m in Sources */,
+=======
+				51D75E0A1C5929F0008788C7 /* ARPPartie.m in Sources */,
+>>>>>>> Stashed changes
 				51D75E071C59247F008788C7 /* ARPcible.m in Sources */,
+				ECC818FA1C592DD100F86484 /* ARPTir.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
