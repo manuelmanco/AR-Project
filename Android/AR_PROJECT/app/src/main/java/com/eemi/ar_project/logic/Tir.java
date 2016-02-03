@@ -14,7 +14,7 @@ public class Tir {
             return -1;
         }
 
-        double distance = Math.sqrt(Math.sqrt((c.x * c.x) + c.y * c.y)) + (c.z * c.z));
+        double distance = Math.sqrt((c.x * c.x) + (c.y * c.y) + (c.z * c.z));
 
         return distance;
     }
