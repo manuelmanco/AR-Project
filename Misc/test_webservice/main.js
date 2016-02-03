@@ -25,9 +25,9 @@ $(document).ready(function(){
                 'module': 'score',
                 'action': 'getHighScores',
                 'params' : {
-                    'limit' : 0,
-                    'offset' : 10,
-                    'period' : 'currentWeek'
+                    'limit' : $('.limit').val(),
+                    'offset' : $('.offset').val(),
+                    'period' : $('.select-period').val()
                 }
             },
         };

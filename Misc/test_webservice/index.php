@@ -14,7 +14,15 @@
             <hr/>
 
 			<p>Afficher scores</p>
-            <button class="trigger_event" display="scores" called-method='getHighScores'>Get scores</button>
+			<form class="formulaire" action="#" method="post">
+				limit: <input class="limit" type="text" name="limit" value="0" placeholder="limit">
+				offset: <input class="offset" type="text" name="offset" value="10" placeholder="offset">
+				<select class='select-period'>
+					<option value="allTime">allTime</option>
+					<option value="currentWeek">currentWeek</option>
+				</select>
+				<button class="trigger_event" display="scores" called-method='getHighScores'>Get scores</button>
+			</form>
             <div class="results" id="scores"></div>
 
             <br/><br/><br/>
