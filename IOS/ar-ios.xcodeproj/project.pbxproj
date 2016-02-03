@@ -113,13 +113,10 @@
 		E49C306B1C591CB800EB66B9 /* ar-ios */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
+
 				ECC818F51C5929B400F86484 /* ARPPartie.h */,
 				ECC818F61C5929B400F86484 /* ARPPartie.m */,
-=======
-				51D75E081C5929F0008788C7 /* ARPPartie.h */,
-				51D75E091C5929F0008788C7 /* ARPPartie.m */,
->>>>>>> Stashed changes
+
 				E49C306F1C591CB800EB66B9 /* AppDelegate.h */,
 				E49C30701C591CB800EB66B9 /* AppDelegate.m */,
 				E49C30721C591CB800EB66B9 /* ViewController.h */,
@@ -296,11 +293,7 @@
 				E49C30741C591CB800EB66B9 /* ViewController.m in Sources */,
 				E49C30711C591CB800EB66B9 /* AppDelegate.m in Sources */,
 				E49C306E1C591CB800EB66B9 /* main.m in Sources */,
-<<<<<<< Updated upstream
 				ECC818F71C5929B400F86484 /* ARPPartie.m in Sources */,
-=======
-				51D75E0A1C5929F0008788C7 /* ARPPartie.m in Sources */,
->>>>>>> Stashed changes
 				51D75E071C59247F008788C7 /* ARPcible.m in Sources */,
 				ECC818FA1C592DD100F86484 /* ARPTir.m in Sources */,
 			);

@@ -10,11 +10,6 @@
 
 @interface ARPcible ()
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-
 @end
 
 @implementation ARPcible
