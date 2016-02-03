@@ -1,0 +1,18 @@
+# Paramètres de connection à la base de données, en fonction de l'environnement de developpement
+dev:
+    db_name:
+    db_host:
+    db_user:
+    db_pass:
+
+test:
+    db_name:
+    db_host:
+    db_user:
+    db_pass:
+
+prod:
+    db_name:
+    db_host:
+    db_user:
+    db_pass:

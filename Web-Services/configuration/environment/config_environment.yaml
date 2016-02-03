@@ -1,0 +1,2 @@
+# Configuration de l'environnement de développement : dev, test ou prod
+server: dev
