@@ -89,7 +89,7 @@ class Score extends \Core\Database\Models
                 ':limit' => array($opts['limit'], PDO::PARAM_INT),
                 ':offset' => array($opts['offset'], PDO::PARAM_INT),
             ),
-            true,
+            'select',
             'all'
         );
     }
