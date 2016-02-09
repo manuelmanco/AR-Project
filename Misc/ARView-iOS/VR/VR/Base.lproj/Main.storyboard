@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Container-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-DP-46P" customClass="NZVRView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="compass" destination="Jr3-f4-qEM" id="xvn-pn-PGl"/>
+                                    <outlet property="container" destination="BYZ-38-t0r" id="Yae-pE-GWO"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jr3-f4-qEM" customClass="NZCompassView">
+                                <rect key="frame" x="270" y="532" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="nPj-yL-BdG"/>
+                                    <constraint firstAttribute="height" constant="60" id="paQ-nA-9qO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yse-DP-46P" secondAttribute="trailing" id="CmT-QS-GSw"/>
+                            <constraint firstItem="Jr3-f4-qEM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S3j-sF-ZOK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jr3-f4-qEM" secondAttribute="bottom" constant="8" id="Y12-kR-ZkF"/>
+                            <constraint firstItem="Yse-DP-46P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b6w-0Z-Vhe"/>
+                            <constraint firstItem="Yse-DP-46P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jgQ-mc-Rfh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yse-DP-46P" secondAttribute="bottom" id="tpB-p1-wgc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="vrView" destination="Yse-DP-46P" id="3NZ-80-big"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
