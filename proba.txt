@@ -1,0 +1,19 @@
+Proba = e(x)-1
+
+
+→ Début (0s)
+→ Premier fantôme (3s) → t0 proba = 0
+→ Deuxième fantôme (13s max)
+
+
+177s 
+toutes les secondes, e(x)
+e(0)
+e(1/177)
+e(2/177)
+
+→ Fin de partie (environ 1min30s)
+
+→ Fin de partie (normalement 3min max) → tfin proba = 1
+
+Musique : 3 minutes (grosse marge)
