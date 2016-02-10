@@ -32,9 +32,11 @@
         NSLog(@"error");
         
     } else {
+        
+        /*
         NSArray *player = [jsonObjects2  objectForKey:@"player"];
         NSArray *highscore = [jsonObjects2 objectForKey:@"player_highscore"];
-        
+        */
         /*for (NSDictionary *item in highscore)
          
         {*/
