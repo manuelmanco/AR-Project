@@ -10,12 +10,36 @@
 
 @implementation ARPcible
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        NSDate* now = [NSDate date];
+        self.born = now;
+        self.x = rand();
+        self.y = rand();
+        self.z = rand();
+        self.active = true;
+        self.rayon = 0.3;
+        self.vitesse = 1.0;
+    
+    }
+    return self;
+}
+
 -(void)create{
-    NSDate* now = [NSDate date];
-    self.born = now;
+   
 }
 
 -(void)maj{
+    
+    double teta = [self calculateTeta];
+    double phi = [self calculatePhiWithTeta:teta];
+    
+    self.x = self.x - self.vitesse * cos(teta);
+    self.y = self.y - self.vitesse * sin(teta);
+    self.z = self.z - self.vitesse * sin(phi);
     
 }
 
@@ -26,8 +50,8 @@
 
 -(bool)hitTestWithX: (double) x andWithY: (double) y{
     double r = [self rayon];
-    double phi = [self calculatePhi];
-    double teta = [self calculateTetaWithPhi:phi];
+    double teta = [self calculateTeta];
+    double phi = [self calculatePhiWithTeta:teta];
     NSArray *tabMonstre = [self positionOnScreenWithTeta: teta AndPhi: phi];
     double xMonstre = [tabMonstre[0] doubleValue];
     double yMonstre = [tabMonstre[1] doubleValue];
@@ -43,20 +67,19 @@
     }
 }
 
-
--(double)calculateTetaWithPhi: (double) phi{
-    double teta = atan2(self.z, phi);
-    return teta;
-}
-
--(double)calculatePhi{
-    double phi = atan2(self.y, self.x);
+-(double)calculatePhiWithTeta: (double) teta{
+    double phi = atan2(self.z, teta);
     return phi;
 }
 
+-(double)calculateTeta{
+    double teta = atan2(self.y, self.x);
+    return teta;
+}
+
 -(NSArray*) positionOnScreenWithTeta: (double)teta AndPhi: (double)phi{
-    double x = kDefautdistancetophone * sin(phi);
-    double y = kDefautdistancetophone * sin(teta);
+    double x = [self distance] * sin(teta);
+    double y = [self distance] * sin(phi);
     return @[@(x) , @(y)];
 }
 
@@ -66,7 +89,8 @@
 }
 
 
--(double)rayon{
+
+-(double)rayon {
     self.rayon = kDefautRadius;
     double d = [self distance];
     double r = (kDefautdistancetophone*self.rayon)/d;

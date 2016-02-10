@@ -39,11 +39,24 @@
 }
 
 - (void) updateGame {
+    
     //generate new targets or not depending of number of lives player has and time of the game
     //do something
+    for (ARPcible *cible in self.targets){
+        if(cible.active == true){
+            [cible maj];
+        }
+    }
+    
+    if([self HowManyTargetsVisibles] == 0){
+        //generate one new target
+        ARPcible* cible = [ARPcible new];
+        [self.targets addObject:cible];
+    }
 }
 
 - (BOOL) hitTestWithX:(double) x andWithY:(double) y {
+    
     //check if a target is present in direction the player pushed
     for(ARPcible *c in self.targets){
         
