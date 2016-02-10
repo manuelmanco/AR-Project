@@ -20,6 +20,8 @@ public class Cible {
 
     public void maj() {
         z += vitesse;
+
+
     }
 
     public double lifespan() {
@@ -41,7 +43,7 @@ public class Cible {
         return (screenDistance * rayon) / d;
     }
 
-    public boolean hitTest(int a, int b) {
+    public boolean hitTest(double a, double b) {
 
         double ecart = Math.sqrt((a - x) * (a - x) + (b - y) * (b - y));
         double rprime = size();

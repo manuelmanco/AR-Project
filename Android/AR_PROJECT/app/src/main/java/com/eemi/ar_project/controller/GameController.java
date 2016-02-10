@@ -31,7 +31,7 @@ public class GameController {
         // appel la fonction HitTest sur toutes les cibles
         for (Cible c : game.targets)
         {
-            c.hitTest(,);
+            c.hitTest(c.x, c.y);
         }
     }
 }
