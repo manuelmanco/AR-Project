@@ -9,7 +9,6 @@ public class Cible {
     public double x;
     public double y;
     public double z;
-    public double rayon;
     public double rayon = 30;
     public double screenDistance = 30;
     public double vitesse;
