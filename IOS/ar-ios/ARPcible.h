@@ -8,27 +8,37 @@
 
 #import <UIKit/UIKit.h>
 
+#define kDefautdistancetophone 30
+#define kDefautRadius 30
+
 @interface ARPcible : UIViewController
-<<<<<<< Updated upstream
 //POSITION
-@property (nonatomic)  NSMutableArray *position;
+@property (nonatomic) double x;
+@property (nonatomic) double y;
+@property (nonatomic) double z;
 //RAYON
 @property (nonatomic) double rayon;
+//ACTIVE
+@property (nonatomic) BOOL active;
+
+
 //VITESSE
 @property (nonatomic) double vitesse;
 //TYPE
 @property (nonatomic) int type;
-//ACTIVE
-@property (nonatomic) BOOL active;
 //DOMAGE
 @property (nonatomic) int domage;
+
+
+
 //BORN
 @property NSDate *born;
 //DEED
-@property NSDate *deed;
-=======
-    
+@property NSDate *dead;
 
 
->>>>>>> Stashed changes
+
+-(NSArray*)positionOnScreenWithTeta: (double) teta AndPhi: (double) phi;
+-(bool)hitTestWithX: (double) x andWithY: (double) y;
+
 @end

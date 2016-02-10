@@ -1,5 +1,11 @@
 package com.eemi.ar_project.logic;
 
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+
+import com.eemi.ar_project.R;
+
 import java.util.ArrayList;
 
 /**
@@ -16,11 +22,12 @@ public class Partie {
         return 0; // todo
     }
 
-    public int killed() {
-        return 0; // todo
-    }
-
     public int visible() {
+        for (Cible i: targets) {
+            if (i.active){
+                i.maj();
+            }
+        }
         return 0; // todo
     }
 }
