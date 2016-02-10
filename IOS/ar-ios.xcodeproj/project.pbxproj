@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518FCB2B1C6B7A0800209DE5 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518FCB2A1C6B7A0800209DE5 /* GameController.m */; };
+		518FCB301C6B7BC700209DE5 /* NZCompassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 518FCB2D1C6B7BC700209DE5 /* NZCompassView.m */; };
+		518FCB311C6B7BC700209DE5 /* NZVRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 518FCB2F1C6B7BC700209DE5 /* NZVRView.m */; };
 		51D75E071C59247F008788C7 /* ARPcible.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D75E061C59247F008788C7 /* ARPcible.m */; };
 		8D6ADC811C6264FF00D2718B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6ADC7E1C6264FF00D2718B /* background.png */; };
 		8D6ADC821C6264FF00D2718B /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D6ADC7F1C6264FF00D2718B /* background@2x.png */; };
@@ -50,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		518FCB291C6B7A0800209DE5 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		518FCB2A1C6B7A0800209DE5 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		518FCB2C1C6B7BC700209DE5 /* NZCompassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZCompassView.h; sourceTree = "<group>"; };
+		518FCB2D1C6B7BC700209DE5 /* NZCompassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZCompassView.m; sourceTree = "<group>"; };
+		518FCB2E1C6B7BC700209DE5 /* NZVRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NZVRView.h; sourceTree = "<group>"; };
+		518FCB2F1C6B7BC700209DE5 /* NZVRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NZVRView.m; sourceTree = "<group>"; };
 		51D75E051C59247F008788C7 /* ARPcible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPcible.h; sourceTree = "<group>"; };
 		51D75E061C59247F008788C7 /* ARPcible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPcible.m; sourceTree = "<group>"; };
 		8D6ADC7E1C6264FF00D2718B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -153,8 +162,14 @@
 		E49C306B1C591CB800EB66B9 /* ar-ios */ = {
 			isa = PBXGroup;
 			children = (
+				518FCB2C1C6B7BC700209DE5 /* NZCompassView.h */,
+				518FCB2D1C6B7BC700209DE5 /* NZCompassView.m */,
+				518FCB2E1C6B7BC700209DE5 /* NZVRView.h */,
+				518FCB2F1C6B7BC700209DE5 /* NZVRView.m */,
 				ECC818F51C5929B400F86484 /* ARPPartie.h */,
 				ECC818F61C5929B400F86484 /* ARPPartie.m */,
+				518FCB291C6B7A0800209DE5 /* GameController.h */,
+				518FCB2A1C6B7A0800209DE5 /* GameController.m */,
 				E49C306F1C591CB800EB66B9 /* AppDelegate.h */,
 				E49C30701C591CB800EB66B9 /* AppDelegate.m */,
 				E49C30721C591CB800EB66B9 /* ViewController.h */,
@@ -344,7 +359,10 @@
 				E49C30741C591CB800EB66B9 /* ViewController.m in Sources */,
 				E49C30711C591CB800EB66B9 /* AppDelegate.m in Sources */,
 				E49C306E1C591CB800EB66B9 /* main.m in Sources */,
+				518FCB301C6B7BC700209DE5 /* NZCompassView.m in Sources */,
+				518FCB311C6B7BC700209DE5 /* NZVRView.m in Sources */,
 				ECC818F71C5929B400F86484 /* ARPPartie.m in Sources */,
+				518FCB2B1C6B7A0800209DE5 /* GameController.m in Sources */,
 				51D75E071C59247F008788C7 /* ARPcible.m in Sources */,
 				ECC818FA1C592DD100F86484 /* ARPTir.m in Sources */,
 			);
