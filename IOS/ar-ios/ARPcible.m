@@ -8,35 +8,69 @@
 
 #import "ARPcible.h"
 
-@interface ARPcible ()
-
-@end
-
 @implementation ARPcible
 
--(void)maj{};
--(void)life{};
--(void)therare{};
--(void)timestanmp{};
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)create{
+    NSDate* now = [NSDate date];
+    self.born = now;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)maj{
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(double)lifespan{
+    double duree = [self.dead timeIntervalSinceDate:self.born];
+    return duree;
 }
-*/
+
+-(bool)hitTestWithX: (double) x andWithY: (double) y{
+    double r = [self rayon];
+    double phi = [self calculatePhi];
+    double teta = [self calculateTetaWithPhi:phi];
+    NSArray *tabMonstre = [self positionOnScreenWithTeta: teta AndPhi: phi];
+    double xMonstre = [tabMonstre[0] doubleValue];
+    double yMonstre = [tabMonstre[1] doubleValue];
+    double distMonstreTap = sqrt(pow(xMonstre-x,2)+pow(yMonstre-y,2));
+    if (distMonstreTap <= r){
+        self.active = false;
+        self.vitesse = 0;
+        NSDate* now = [NSDate date];
+        self.dead = now;
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+-(double)calculateTetaWithPhi: (double) phi{
+    double teta = atan2(self.z, phi);
+    return teta;
+}
+
+-(double)calculatePhi{
+    double phi = atan2(self.y, self.x);
+    return phi;
+}
+
+-(NSArray*) positionOnScreenWithTeta: (double)teta AndPhi: (double)phi{
+    double x = kDefautdistancetophone * sin(phi);
+    double y = kDefautdistancetophone * sin(teta);
+    return @[@(x) , @(y)];
+}
+
+-(double)distance{
+    double d = sqrt(pow(self.x, 2)+pow(self.y, 2)+pow(self.z, 2));
+    return d;
+}
+
+
+-(double)rayon{
+    self.rayon = kDefautRadius;
+    double d = [self distance];
+    double r = (kDefautdistancetophone*self.rayon)/d;
+    return r;
+}
 
 @end

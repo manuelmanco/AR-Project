@@ -9,15 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface ARPPartie : NSObject
+
     @property NSDate *start;
     @property NSDate *end;
     @property NSMutableArray *shots;
     @property NSMutableArray *targets;
     @property int lives;
+    @property int rayonEffectif;
 
-- (int) score;
-- (int) HowManyKilledTargets;
-- (int) HowManyTargetsVisibles;
-- (void) updateGame;
-- (BOOL) hitTestWithPhi: (double) phi andWithTeta: (double) teta;
+    - (int) score;
+    - (int) rayonEffectif;
+    - (int) HowManyKilledTargets;
+    - (int) HowManyTargetsVisibles;
+    - (void) updateGame;
+    - (BOOL) hitTestWithX: (double) x andWithY: (double) y;
+
 @end
