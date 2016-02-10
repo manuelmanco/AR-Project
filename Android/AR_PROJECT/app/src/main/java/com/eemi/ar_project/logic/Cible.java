@@ -9,7 +9,8 @@ public class Cible {
     public double x;
     public double y;
     public double z;
-    public double rayon;
+    public double rayon = 30;
+    public double screenDistance = 30;
     public double vitesse;
     public int type;
     public boolean active;
@@ -18,7 +19,7 @@ public class Cible {
     public double dead;
 
     public void maj() {
-        
+        z += vitesse;
     }
 
     public double lifespan() {
@@ -29,7 +30,25 @@ public class Cible {
         }
     }
 
-    public boolean hitTest( double phi, double theta) {
-        return false; // TODO: 1/27/2016
+    public double distance() {
+        return Math.sqrt((x * x) + (y * y) + (z * z));
     }
+
+    // Calcul de r'
+    public double size() {
+        double d = distance();
+
+        return (screenDistance * rayon) / d;
+    }
+
+    public boolean hitTest(int a, int b) {
+
+        double ecart = Math.sqrt((a - x) * (a - x) + (b - y) * (b - y));
+        double rprime = size();
+
+        return ecart <= rprime;
+
+    }
+
+
 }

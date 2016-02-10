@@ -16,11 +16,10 @@ public class Partie {
         return 0; // todo
     }
 
-    public int killed() {
-        return 0; // todo
-    }
-
     public int visible() {
+        for (ArrayList <Cible> i: targets) {
+
+        }
         return 0; // todo
     }
 }

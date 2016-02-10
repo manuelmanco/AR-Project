@@ -18,6 +18,8 @@ public class Tir {
     }
 
     public int nbDePoints() {
+        double d = distance();
+
         return 0; // todo
     }
 }
