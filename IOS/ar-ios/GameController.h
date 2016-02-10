@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ARPPartie.h"
 
 @interface GameController : UIViewController
+
+@property ARPPartie *partie;
 
 @end

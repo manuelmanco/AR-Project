@@ -18,8 +18,23 @@
 @implementation GameController
 
 - (void)viewDidLoad {
+    
+    UITapGestureRecognizer *l = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    l.numberOfTouchesRequired = 1;
+    [self.vrView addGestureRecognizer: l];
+    
+    self.vrView.compass.userInteractionEnabled = NO;
+    self.vrView.userInteractionEnabled = YES;
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.partie updateGame];
+    
+    
+}
+
+- (void) handleTap:(UIGestureRecognizer*)g {
+    double x = [g locationInView:self.vrView].x;
+    double y = [g locationInView:self.vrView].y;
 }
 
 - (void)didReceiveMemoryWarning {

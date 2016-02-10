@@ -14,15 +14,17 @@
 {
     self = [super init];
     if (self) {
-        
-        NSDate* now = [NSDate date];
-        self.born = now;
-        self.x = rand();
-        self.y = rand();
-        self.z = rand();
+        double distance = [self distance];
+        self.born = [NSDate date].timeIntervalSince1970;
+        double t = [NSDate date].timeIntervalSince1970;
+        double teta = (arc4random()%3-1) * sin(10 * t);
+        double phi = (arc4random()%800 / 1000) * (arc4random()%3 - 1);
+        self.x = distance * cos(teta);
+        self.y = distance * sin(teta);
+        self.z = distance * sin(phi);
         self.active = true;
         self.rayon = 0.3;
-        self.vitesse = 1.0;
+        self.vitesse = 1.0/60;
     
     }
     return self;
@@ -41,10 +43,12 @@
     self.y = self.y - self.vitesse * sin(teta);
     self.z = self.z - self.vitesse * sin(phi);
     
+    
+    
 }
 
 -(double)lifespan{
-    double duree = [self.dead timeIntervalSinceDate:self.born];
+    double duree = self.dead - self.born;
     return duree;
 }
 
@@ -59,8 +63,8 @@
     if (distMonstreTap <= r){
         self.active = false;
         self.vitesse = 0;
-        NSDate* now = [NSDate date];
-        self.dead = now;
+        //NSDate* now = [NSDate date];
+        self.dead = [NSDate date].timeIntervalSince1970;
         return true;
     }else{
         return false;

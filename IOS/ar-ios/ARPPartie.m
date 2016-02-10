@@ -30,7 +30,7 @@
 - (int) HowManyTargetsVisibles {
     int ciblesCount = 0;
     for(ARPcible *cible in self.targets){
-        if (cible.active == true){
+        if (cible.active == true) {
             ciblesCount++;
         }
     }
@@ -42,9 +42,16 @@
     
     //generate new targets or not depending of number of lives player has and time of the game
     //do something
+    
     for (ARPcible *cible in self.targets){
         if(cible.active == true){
             [cible maj];
+            double distance = [cible distance];
+            if(distance < 1.0){
+                cible.dead = [NSDate date].timeIntervalSince1970;
+                cible.active = false;
+                self.lives--;
+            }
         }
     }
     
@@ -52,6 +59,14 @@
         //generate one new target
         ARPcible* cible = [ARPcible new];
         [self.targets addObject:cible];
+    }
+    
+    if(self.lives > 0){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateGame];
+        });
+    }else{
+        //vue defaite
     }
 }
 
@@ -70,18 +85,6 @@
     
     return true;
     
-}
-
-- (void) findCenter {
-
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-    CGFloat screenCenterX = (screenWidth / 2);
-    CGFloat screenCenterY = (screenHeight /2);
-    NSLog(@"centre x: %lf", screenCenterX);
-    NSLog(@"centre y: %lf", screenCenterY);
-
 }
 
 @end

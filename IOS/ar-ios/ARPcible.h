@@ -32,14 +32,15 @@
 
 
 //BORN
-@property NSDate *born;
+@property double born;
 //DEED
-@property NSDate *dead;
+@property double dead;
 
 
 
 -(NSArray*)positionOnScreenWithTeta: (double) teta AndPhi: (double) phi;
 -(bool)hitTestWithX: (double) x andWithY: (double) y;
 -(void)maj;
+-(double)distance;
 
 @end
