@@ -8,27 +8,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.eemi.ar_project.MainActivity"
-    android:background="#000000">
+    android:background="@drawable/background">
 
-    <TextView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gogoghost"
-        android:layout_marginTop="51dp"
-        android:textColor="#ff0000"
-        android:textSize="80px"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Game"
-        android:id="@+id/buttonStart"
-        android:background="#000000"
-        android:textColor="#eaff00"
-        android:layout_below="@+id/textView"
+        android:id="@+id/imageButton"
+        android:src="@drawable/play_button"
+        android:background="#00ffffff"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp" />
+        android:onClick="setContentView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo"
+        android:layout_above="@+id/imageButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="101dp"
+        android:layout_marginEnd="101dp" />
 </RelativeLayout>
