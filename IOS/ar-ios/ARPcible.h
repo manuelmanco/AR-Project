@@ -29,11 +29,16 @@
 //DOMAGE
 @property (nonatomic) int domage;
 
--(NSArray*)positionOnScreenWithTeta: (double) teta AndPhi: (double) phi;
+
 
 //BORN
 @property NSDate *born;
 //DEED
-@property NSDate *deed;
+@property NSDate *dead;
+
+
+
+-(NSArray*)positionOnScreenWithTeta: (double) teta AndPhi: (double) phi;
+-(bool)hitTestWithX: (double) x andWithY: (double) y;
 
 @end
