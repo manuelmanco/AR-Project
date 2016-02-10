@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-SQ-EyB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-SQ-EyB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBb-rw-jQ8">
-                                <rect key="frame" x="125" y="82" width="351" height="217"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIK-7B-TlV">
-                                <rect key="frame" x="146" y="350" width="309" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIK-7B-TlV">
+                                <rect key="frame" x="20" y="339" width="309" height="65"/>
                                 <state key="normal" image="play_button.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-9q-ysO">
-                                <rect key="frame" x="173" y="450" width="254" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-9q-ysO">
+                                <rect key="frame" x="326" y="339" width="254" height="66"/>
                                 <state key="normal" image="scores_button.png"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-UG-LQ4">
+                                <rect key="frame" x="122" y="86" width="357" height="228"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wUl-SQ-EyB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2ro-pX-qSn"/>
+                            <constraint firstItem="wUl-SQ-EyB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GBc-tG-iih"/>
+                            <constraint firstItem="wgg-9q-ysO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HJc-vL-BI5"/>
+                            <constraint firstItem="GAc-UG-LQ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Meo-zH-mDb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wUl-SQ-EyB" secondAttribute="bottom" id="V2Z-v9-xJO"/>
+                            <constraint firstItem="GAc-UG-LQ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="e7a-Ie-oo4"/>
+                            <constraint firstAttribute="trailing" secondItem="wUl-SQ-EyB" secondAttribute="trailing" id="gFp-jf-vhj"/>
+                            <constraint firstItem="wgg-9q-ysO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jnK-28-pCu"/>
+                            <constraint firstItem="aIK-7B-TlV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nPl-pd-KgJ"/>
+                            <constraint firstItem="aIK-7B-TlV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nWU-eb-Kes"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aIK-7B-TlV" secondAttribute="bottom" constant="30" id="yVQ-re-XdV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wgg-9q-ysO" secondAttribute="bottom" constant="30" id="z7o-dT-HFU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nWU-eb-Kes"/>
+                                <exclude reference="HJc-vL-BI5"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
